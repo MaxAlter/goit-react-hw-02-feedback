@@ -31,8 +31,7 @@ export default class App extends Component {
     return countPositiveFeedback;
   };
 
-  handleChange = e => {
-    const { name } = e.target;
+  handleChange = name => {
     this.setState(prevState => ({
       [name]: prevState[name] + 1,
     }));
