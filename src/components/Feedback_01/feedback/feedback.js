@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import style from './FeedbackOptions.module.css';
 
@@ -7,7 +7,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <div>
       {options.map(item => (
         <button
-          className={stayle.btnStyle}
+          className={style.btnStyle}
           key={item.id}
           name={item.name}
           type="button"
