@@ -4,6 +4,12 @@ import Section from './components/Feedback_01/Section/Section';
 import Statistics from './components/Feedback_01/Statistics/Statistics';
 import Notification from './components/Feedback_01/Notification/Notification';
 
+const feedBackOptions = [
+  { id: 1, name: 'good' },
+  { id: 2, name: 'neutral' },
+  { id: 3, name: 'bad' },
+];
+
 export default class App extends Component {
   state = {
     good: 0,
@@ -43,7 +49,10 @@ export default class App extends Component {
     return (
       <Fragment>
         <Section title="Plaese leave feedback">
-          <FeedbackOptions onLeaveFeedback={this.handleChange} />
+          <FeedbackOptions
+            onLeaveFeedback={this.handleChange}
+            options={feedBackOptions}
+          />
         </Section>
         <Section title="Statistic">
           {good || neutral || bad ? (
